@@ -1,6 +1,6 @@
 {
 	"name": "@mitre/jsonix",
-	"version": "3.0.1-SNAPSHOT",
+	"version": "3.0.1",
 	"description": "Jsonix (JSON interfaces for XML) is a JavaScript library which allows converting between XML and JSON structures.",
 	"keywords": [
 		"json",
@@ -20,9 +20,9 @@
 		"jaxb",
 		"jsonix"
 	],
-	"homepage": "http://github.com/highsource/jsonix",
+	"homepage": "http://github.com/mitre/jsonix",
 	"bugs": {
-		"url": "http://github.com/highsource/jsonix/issues"
+		"url": "http://github.com/mitre/jsonix/issues"
 	},
 	"licenses": [
 		{
