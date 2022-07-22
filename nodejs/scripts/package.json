@@ -45,6 +45,7 @@
 		"type": "git",
 		"url": "http://github.com/mitre/jsonix.git"
 	},
+	"types": "./types/main.d.ts",
 	"scripts": {
 		"test": "nodeunit tests/tests.js"
 	},
