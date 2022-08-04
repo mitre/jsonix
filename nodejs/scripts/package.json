@@ -50,12 +50,12 @@
 		"test": "nodeunit tests/tests.js"
 	},
 	"dependencies": {
+		"@xmldom/xmldom": "^0.8.2",
 		"amdefine": "^0.0.4",
-		"xmldom": "^0.6.0",
 		"xmlhttprequest": "^1.8.0"
 	},
 	"devDependencies": {
-		"nodeunit": "^0.11.3",
-		"node-static": "^0.7.11"
+		"node-static": "^0.7.11",
+		"nodeunit": "^0.11.3"
 	}
 }
