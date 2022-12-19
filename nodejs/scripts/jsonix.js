@@ -5982,11 +5982,11 @@ if (typeof require === 'function') {
 	// ... but the define function does not exists
 	if (typeof define !== 'function') {
 		// Load the define function via amdefine
-		// var define = require('amdefine')(module);
+		var define = require('amdefine')(module);
 		// If we're not in browser
 		if (typeof window === 'undefined') {
 			// Require xmldom, xmlhttprequest and fs
-			define(["xmldom", "xmlhttprequest", "fs"], _jsonix_factory);
+			define(["@xmldom/xmldom", "xmlhttprequest", "fs"], _jsonix_factory);
 		}
 		else {
 			// We're probably in browser, maybe browserify
