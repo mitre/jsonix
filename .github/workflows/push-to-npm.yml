@@ -1,0 +1,36 @@
+name: Publish @mitre/jsonix to NPM
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@master
+
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"
+          registry-url: 'https://registry.npmjs.org'
+      
+      - name: Install Project Dependencies
+        working-directory: ./nodejs/scripts
+        run: npm ci
+      
+      - name: Remove Tests and Demos
+        working-directory: ./nodejs/scripts
+        run: |
+          rm -rf tests
+          rm -rf demos
+      
+      - name: Package Items
+        working-directory: ./nodejs/scripts
+        run: npm pack
+      
+      - name: Publish to npm
+        working-directory: ./nodejs/scripts
+        run: npm publish --access public mitre-jsonix-*.tgz
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.SAF_NPM_TOKEN }}
