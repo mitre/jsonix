@@ -1,5 +1,5 @@
 var fs = require('fs');
-var DOMParser = require('xmldom').DOMParser;
+var DOMParser = require('@xmldom/xmldom').DOMParser;
 module.exports = {
 	parseFromString: function(test) {
 		var Handler = function(){};

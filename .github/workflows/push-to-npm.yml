@@ -5,7 +5,7 @@ on:
 
 jobs:
   build-deploy:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@master
 
@@ -23,7 +23,6 @@ jobs:
         working-directory: ./nodejs/scripts
         run: |
           rm -rf tests
-          rm -rf demos
       
       - name: Package Items
         working-directory: ./nodejs/scripts
