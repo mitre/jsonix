@@ -5,7 +5,7 @@ module.exports =
 	{
 		"Without prefix" : function(test)
 		{
-			var xmldom = require('xmldom');
+			var xmldom = require('@xmldom/xmldom');
 			var di = new (xmldom.DOMImplementation)();
 			var doc = di.createDocument();
 			var element = doc.createElementNS('urn:test', 'test');
@@ -18,7 +18,7 @@ module.exports =
 		},
 		"With Prefix" : function(test)
 		{
-			var xmldom = require('xmldom');
+			var xmldom = require('@xmldom/xmldom');
 			var di = new (xmldom.DOMImplementation)();
 			var doc = di.createDocument();
 			var element = doc.createElementNS('urn:test', 't:test');
