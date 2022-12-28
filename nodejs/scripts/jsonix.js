@@ -5981,18 +5981,28 @@ var _jsonix_factory = function (_jsonix_xmldom, _jsonix_xmlhttprequest, _jsonix_
 if (typeof require === 'function') {
 	// ... but the define function does not exists
 	if (typeof define !== 'function') {
-		// Load the define function via amdefine
-		var define = require('amdefine')(module);
-		// If we're not in browser
-		if (typeof window === 'undefined') {
-			// Require xmldom, xmlhttprequest and fs
-			define(["@xmldom/xmldom", "xmlhttprequest", "fs"], _jsonix_factory);
-		}
-		else {
-			// We're probably in browser, maybe browserify
-			// Do not require xmldom, xmlhttprequest as they'r provided by the browser
-			// Do not require fs since file system is not available anyway
-			define([], _jsonix_factory);
+		// solution derived from https://github.com/markosankovic/jsonix-nodejs/commit/65bb92f260551a95c4c1d257f92df91b97696ddc
+		try {
+			// Load the define function via amdefine
+			var define = require('amdefine')(module);
+			// If we're not in browser
+			if (typeof window === 'undefined') {
+				// Require xmldom, xmlhttprequest and fs
+				define(["@xmldom/xmldom", "xmlhttprequest", "fs"], _jsonix_factory);
+			}
+			else {
+				// We're probably in browser, maybe browserify
+				// Do not require xmldom, xmlhttprequest as they'r provided by the browser
+				// Do not require fs since file system is not available anyway
+				define([], _jsonix_factory);
+			}
+		} catch (e) {
+			if (typeof exports === "object") {
+				module.exports = _jsonix_factory();
+			}
+			else {
+				var Jsonix = _jsonix_factory().Jsonix;
+			}
 		}
 	}
 	else {
