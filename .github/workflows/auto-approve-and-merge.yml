@@ -5,10 +5,11 @@ on:
 
 jobs:
   auto-approve:
+    name: Auto-approve dependabot PRs
     runs-on: ubuntu-20.04
     permissions:
       pull-requests: write
-    if: github.actor == 'dependabot[bot]'
+    if: github.event.pull_request.user.login == 'dependabot[bot]' && contains(github.event.pull_request.labels.*.name, 'dependencies')
     steps:
       - uses: hmarr/auto-approve-action@v3
         with:
