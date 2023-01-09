@@ -2,9 +2,6 @@ name: Auto approve and Merge Dependabot PRs
 on:
   pull_request_target:
     types: [labeled]
-permissions:
-  pull-requests: write
-  contents: write
 
 jobs:
   auto-approve:
@@ -12,6 +9,7 @@ jobs:
     runs-on: ubuntu-20.04
     permissions:
       pull-requests: write
+      contents: write
     if: github.event.pull_request.user.login == 'dependabot[bot]' && contains(github.event.pull_request.labels.*.name, 'dependencies')
     steps:
       - uses: hmarr/auto-approve-action@v3
