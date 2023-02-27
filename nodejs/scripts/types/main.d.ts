@@ -8,37 +8,37 @@ interface Unmarshaller {  //TODO: <T> @see createUnmarshaller
    * (description)
    *
    * @param {string} arg (description)
-   * @returns {Object} (description)
+   * @returns {Record<string, unknown>} (description)
    */
-  unmarshalString(arg: string): Object;
+  unmarshalString(arg: string): Record<string, unknown>;
 
   /**
    * (description)
    *
    * @param {string} fileName (description)
-   * @param {(unmarshalled:Object)=> void} callback (description)
-   * @param {Object} options (description)
+   * @param {(unmarshalled:Record<string, unknown>)=> void} callback (description)
+   * @param {Record<string, unknown>} options (description)
    */
-  unmarshalFile(fileName: string, callback: (unmarshalled: Object) => void, options: Object): void;
+  unmarshalFile(fileName: string, callback: (unmarshalled: Record<string, unknown>) => void, options: Record<string, unknown>): void;
 
 
   /**
    * (description)
    *
    * @param {string} url (description)
-   * @param {(unmarshalled:Object)=> void} callback (description)
-   * @param {Object} options (description)
+   * @param {(unmarshalled:Record<string, unknown>)=> void} callback (description)
+   * @param {Record<string, unknown>} options (description)
    */
-  unmarshalURL(url: string, callback: (unmarshalled: Object) => void, options: Object): void;
+  unmarshalURL(url: string, callback: (unmarshalled: Record<string, unknown>) => void, options: Record<string, unknown>): void;
 
   /**
    * (description)
    *
    * @param {Element} doc (description)
    * @param {string} scope (description)
-   * @returns {Object} (description)
+   * @returns {Record<string, unknown>} (description)
    */
-  unmarshalDocument(doc: Element, scope: string): Object;
+  unmarshalDocument(doc: Element, scope: string): Record<string, unknown>;
 }
 /**
 * (description)
@@ -49,18 +49,18 @@ interface Marshaller { // TODO: generics like marshalString(object:T):string;
   /**
    * (description)
    *
-   * @param {Object} object (description)
+   * @param {Record<string, unknown>} object (description)
    * @returns {string} (description)
    */
-  marshalString(object: Object): string;
+  marshalString(object: Record<string, unknown>): string;
 
   /**
    * (description)
    *
-   * @param {Object} object (description)
+   * @param {Record<string, unknown>} object (description)
    * @returns {Element} (description)
    */
-  marshalDocument(object: Object): Element;
+  marshalDocument(object: Record<string, unknown>): Element;
 }
 
 declare module '@mitre/jsonix' {
