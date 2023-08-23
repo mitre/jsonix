@@ -1,6 +1,6 @@
 {
 	"name": "@mitre/jsonix",
-	"version": "3.0.6",
+	"version": "3.0.7",
 	"description": "Jsonix (JSON interfaces for XML) is a JavaScript library which allows converting between XML and JSON structures.",
 	"keywords": [
 		"json",
