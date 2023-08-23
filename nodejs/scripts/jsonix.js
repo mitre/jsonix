@@ -30,7 +30,7 @@ var _jsonix_factory = function (_jsonix_xmldom, _jsonix_xmlhttprequest, _jsonix_
 
 			// REWORK
 			// Node.js
-			sourceIsEvt = typeof window !== 'undefined' && window !== null && typeof window.Event === "function" && source instanceof window.Event;
+			var sourceIsEvt = typeof window !== 'undefined' && window !== null && typeof window.Event === "function" && source instanceof window.Event;
 
 			if (!sourceIsEvt && source.hasOwnProperty && source.hasOwnProperty('toString')) {
 				destination.toString = source.toString;
