@@ -39,7 +39,7 @@ Jsonix.Context = Jsonix
 				{
 					if (this.namespacePrefixes.hasOwnProperty(ns))
 					{
-						p = this.namespacePrefixes[ns];
+						var p = this.namespacePrefixes[ns];
 						this.prefixNamespaces[p] = ns;
 					}
 				}
