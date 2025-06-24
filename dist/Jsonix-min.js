@@ -2378,7 +2378,7 @@ this.scopedElementInfosMap={};
 if(Jsonix.Util.Type.exists(l)){Jsonix.Util.Ensure.ensureObject(l);
 if(Jsonix.Util.Type.isObject(l.namespacePrefixes)){this.namespacePrefixes=Jsonix.Util.Type.cloneObject(l.namespacePrefixes,{})
 }if(Jsonix.Util.Type.isBoolean(l.supportXsiType)){this.supportXsiType=l.supportXsiType
-}}for(var j in this.namespacePrefixes){if(this.namespacePrefixes.hasOwnProperty(j)){p=this.namespacePrefixes[j];
+}}for(var j in this.namespacePrefixes){if(this.namespacePrefixes.hasOwnProperty(j)){var p=this.namespacePrefixes[j];
 this.prefixNamespaces[p]=j
 }}if(Jsonix.Util.Type.exists(i)){Jsonix.Util.Ensure.ensureArray(i);
 var g,h,k;
