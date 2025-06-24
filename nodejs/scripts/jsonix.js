@@ -5719,7 +5719,7 @@ var _jsonix_factory = function (_jsonix_xmldom, _jsonix_xmlhttprequest, _jsonix_
 				// Initialize prefix/namespace mapping
 				for (var ns in this.namespacePrefixes) {
 					if (this.namespacePrefixes.hasOwnProperty(ns)) {
-						p = this.namespacePrefixes[ns];
+						var p = this.namespacePrefixes[ns];
 						this.prefixNamespaces[p] = ns;
 					}
 				}
