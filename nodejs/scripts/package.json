@@ -1,6 +1,6 @@
 {
 	"name": "@mitre/jsonix",
-	"version": "3.0.9",
+	"version": "3.0.10",
 	"description": "Jsonix (JSON interfaces for XML) is a JavaScript library which allows converting between XML and JSON structures.",
 	"keywords": [
 		"json",
@@ -26,8 +26,8 @@
 	},
 	"licenses": [
 		{
-			"type": "BSD-3-Clause",
-			"url": "http://github.com/highsource/jsonix/raw/master/LICENSE"
+			"type": "(Apache-2.0 AND BSD-2-Clause)",
+			"url": "https://github.com/mitre/jsonix/raw/master/LICENSE"
 		}
 	],
 	"author": {
@@ -38,6 +38,10 @@
 		{
 			"name": "Conrad Pankoff",
 			"url": "https://github.com/deoxxa"
+		},
+		{
+			"name": "MITRE SAF (C)",
+			"url": "https://saf.mitre.org"
 		}
 	],
 	"main": "jsonix.js",
