@@ -1,6 +1,4 @@
-NOTE: The Apache-2.0 License applies to all contributions from MITRE and any further contributions from outside parties.  The BSD-2-Clause License applies to all contributions from Alexey Valikov and all contributions prior to the creation of this fork.
-
-© 2022 The MITRE Corporation.
+© 2025 The MITRE Corporation.
 
 Approved for Public Release; Distribution Unlimited. Case Number 18-3678.
 
@@ -24,6 +22,13 @@ Redistribution and use in source and binary forms, with or without modification,
 
 - Neither the name of The MITRE Corporation nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 
+MITRE’s licensed products include third-party materials that are subject to open source or free software licenses (“Open Source Materials”). The Open Source Materials are as follows:
+
+Jsonix - BSD 2-Clause License - Copyright (c) 2014, Alexey Valikov. Please visit https://github.com/highsource/jsonix/blob/5d0d101f338bcf514bb6249437860e4b4d011cd2/LICENSE for full terms of use.
+
+The Open Source Materials are licensed under the terms of the applicable third-party licenses that accompany the Open Source Materials. MITRE’s license does not limit a licensee’s rights under the terms of the Open Source Materials license. MITRE’s license also does not grant licensee rights to the Open Source Materials that supersede the terms and conditions of the Open Source Materials license.
+
+
 NOTICE
 
 MITRE grants permission to reproduce, distribute, modify, and otherwise use this software to the extent permitted by the licensed terms provided in the LICENSE file included with this project.
@@ -31,27 +36,3 @@ MITRE grants permission to reproduce, distribute, modify, and otherwise use this
 This software was produced by The MITRE Corporation for the U. S. Government under contract. As such the U.S. Government has certain use and data rights in this software. No use other than those granted to the U. S. Government, or to those acting on behalf of the U. S. Government, under these contract arrangements is authorized without the express written permission of The MITRE Corporation.
 
 For further information, please contact The MITRE Corporation, Contracts Management Office, 7515 Colshire Drive, McLean, VA 22102-7539, (703) 983-6000.
-
-Copyright (c) 2014, Alexey Valikov.
-All rights reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-
-* Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.
-
-* Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
