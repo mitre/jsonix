@@ -1,19 +1,27 @@
 name: Publish @mitre/jsonix to NPM
+
 on:
   release:
     types: [published]
+
+permissions:
+  id-token: write # required for trusted publishing's use of OIDC
+  contents: read
 
 jobs:
   build-deploy:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: setup node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 22
           registry-url: 'https://registry.npmjs.org'
+
+      - name: Manually update npm to 11.5.1 or later which is the required version for trusted publishing to work # this step can be removed after the ubuntu runner has the correct minimum version of npm installed
+        run: npm install -g npm@latest
       
       - name: Install Project Dependencies
         working-directory: ./nodejs/scripts
@@ -31,5 +39,3 @@ jobs:
       - name: Publish to npm
         working-directory: ./nodejs/scripts
         run: npm publish --access public mitre-jsonix-*.tgz
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.SAF_NPM_TOKEN }}
